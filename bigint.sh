@@ -1,5 +1,4 @@
 #!/bin/sh
-set -u
 
 if [ ! -d bigint-2010.04.30 ]
 then

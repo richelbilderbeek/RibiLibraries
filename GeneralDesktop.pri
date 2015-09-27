@@ -1,9 +1,2 @@
-exists(../../Classes/CppQtAboutDialog/CppQtAboutDialog.pri) {
-  include(../../Classes/CppQtAboutDialog/CppQtAboutDialog.pri)
-  include(../../Classes/CppQtHideAndShowDialog/CppQtHideAndShowDialog.pri)
-}
-
-exists(../Classes/CppQtAboutDialog/CppQtAboutDialog.pri) {
-  include(../Classes/CppQtAboutDialog/CppQtAboutDialog.pri)
-  include(../Classes/CppQtHideAndShowDialog/CppQtHideAndShowDialog.pri)
-}
+include(../RibiClasses/CppQtAboutDialog/CppQtAboutDialog.pri)
+include(../RibiClasses/CppQtHideAndShowDialog/CppQtHideAndShowDialog.pri)
