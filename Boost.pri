@@ -1,8 +1,7 @@
 win32 {
   # Windows only
   message("Boost, built for Windows")
-  INCLUDEPATH += \
-    ../../Libraries/boost_1_56_0
+  INCLUDEPATH += C:\boost_1_59_0
 }
 
 macx {

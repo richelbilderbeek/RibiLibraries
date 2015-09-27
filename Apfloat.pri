@@ -3,56 +3,56 @@ win32 {
   message("Apfloat 2.4.1, built for Windows")
 
   INCLUDEPATH += \
-      ../RibiLibraries/apf241
+      ../RibiLibraries/Apfloat
 
   HEADERS += \
-      ../RibiLibraries/apf241/ap.h \
-      ../RibiLibraries/apf241/apcplx.h \
-      ../RibiLibraries/apf241/apfloat.h \
-      ../RibiLibraries/apf241/apint.h \
-      ../RibiLibraries/apf241/aprat.h \
-      ../RibiLibraries/apf241/baseint.h \
-      ../RibiLibraries/apf241/bigint.h \
-      ../RibiLibraries/apf241/modint.h \
-      ../RibiLibraries/apf241/raw.h \
-      ../RibiLibraries/apf241/tapfloat.h
+      ../RibiLibraries/Apfloat/ap.h \
+      ../RibiLibraries/Apfloat/apcplx.h \
+      ../RibiLibraries/Apfloat/apfloat.h \
+      ../RibiLibraries/Apfloat/ap1int.h \
+      ../RibiLibraries/Apfloat/aprat.h \
+      ../RibiLibraries/Apfloat/baseint.h \
+      ../RibiLibraries/Apfloat/bigint.h \
+      ../RibiLibraries/Apfloat/modint.h \
+      ../RibiLibraries/Apfloat/raw.h \
+      ../RibiLibraries/Apfloat/tapfloat.h
 
   SOURCES += \
-      ../RibiLibraries/apf241/apcfunc.cpp \
-      ../RibiLibraries/apf241/apcplx.cpp \
-      ../RibiLibraries/apf241/apfloat.cpp \
-      ../RibiLibraries/apf241/apfunc.cpp \
-      ../RibiLibraries/apf241/apifunc.cpp \
-      ../RibiLibraries/apf241/apint.cpp \
-      ../RibiLibraries/apf241/aprat.cpp \
-      ../RibiLibraries/apf241/aprfunc.cpp \
-      ../RibiLibraries/apf241/apstruct.cpp \
-      ../RibiLibraries/apf241/baseint.cpp \
-      ../RibiLibraries/apf241/bigint.cpp \
-      ../RibiLibraries/apf241/carrycrt.cpp \
-      ../RibiLibraries/apf241/convolut.cpp \
-      ../RibiLibraries/apf241/crt.cpp \
-      ../RibiLibraries/apf241/datastru.cpp \
-      ../RibiLibraries/apf241/file.cpp \
-      ../RibiLibraries/apf241/fnt.cpp \
-      ../RibiLibraries/apf241/fourstep.cpp \
-      ../RibiLibraries/apf241/global.cpp \
-      ../RibiLibraries/apf241/init.cpp \
-      ../RibiLibraries/apf241/modfunc.cpp \
-      ../RibiLibraries/apf241/move.cpp \
-      ../RibiLibraries/apf241/scramble.cpp \
-      ../RibiLibraries/apf241/sixstep.cpp \
-      ../RibiLibraries/apf241/tablefnt.cpp \
-      ../RibiLibraries/apf241/tablefou.cpp \
-      ../RibiLibraries/apf241/tablesit.cpp \
-      ../RibiLibraries/apf241/tablesix.cpp \
-      ../RibiLibraries/apf241/tabletwo.cpp \
-      ../RibiLibraries/apf241/tabletwt.cpp \
-      ../RibiLibraries/apf241/tapfloat.cpp \
-      ../RibiLibraries/apf241/tapfunc.cpp \
-      ../RibiLibraries/apf241/tapstruc.cpp \
-      ../RibiLibraries/apf241/transpos.cpp \
-      ../RibiLibraries/apf241/wfta_asm.cpp
+      ../RibiLibraries/Apfloat/apcfunc.cpp \
+      ../RibiLibraries/Apfloat/apcplx.cpp \
+      ../RibiLibraries/Apfloat/apfloat.cpp \
+      ../RibiLibraries/Apfloat/apfunc.cpp \
+      ../RibiLibraries/Apfloat/apifunc.cpp \
+      ../RibiLibraries/Apfloat/apint.cpp \
+      ../RibiLibraries/Apfloat/aprat.cpp \
+      ../RibiLibraries/Apfloat/aprfunc.cpp \
+      ../RibiLibraries/Apfloat/apstruct.cpp \
+      ../RibiLibraries/Apfloat/baseint.cpp \
+      ../RibiLibraries/Apfloat/bigint.cpp \
+      ../RibiLibraries/Apfloat/carrycrt.cpp \
+      ../RibiLibraries/Apfloat/convolut.cpp \
+      ../RibiLibraries/Apfloat/crt.cpp \
+      ../RibiLibraries/Apfloat/datastru.cpp \
+      ../RibiLibraries/Apfloat/file.cpp \
+      ../RibiLibraries/Apfloat/fnt.cpp \
+      ../RibiLibraries/Apfloat/fourstep.cpp \
+      ../RibiLibraries/Apfloat/global.cpp \
+      ../RibiLibraries/Apfloat/init.cpp \
+      ../RibiLibraries/Apfloat/modfunc.cpp \
+      ../RibiLibraries/Apfloat/move.cpp \
+      ../RibiLibraries/Apfloat/scramble.cpp \
+      ../RibiLibraries/Apfloat/sixstep.cpp \
+      ../RibiLibraries/Apfloat/tablefnt.cpp \
+      ../RibiLibraries/Apfloat/tablefou.cpp \
+      ../RibiLibraries/Apfloat/tablesit.cpp \
+      ../RibiLibraries/Apfloat/tablesix.cpp \
+      ../RibiLibraries/Apfloat/tabletwo.cpp \
+      ../RibiLibraries/Apfloat/tabletwt.cpp \
+      ../RibiLibraries/Apfloat/tapfloat.cpp \
+      ../RibiLibraries/Apfloat/tapfunc.cpp \
+      ../RibiLibraries/Apfloat/tapstruc.cpp \
+      ../RibiLibraries/Apfloat/transpos.cpp \
+      ../RibiLibraries/Apfloat/wfta_asm.cpp
 
 }
 
@@ -67,54 +67,54 @@ unix:!macx {
   message("Apfloat 2.4.1, built for Linux")
 
   INCLUDEPATH += \
-      ../RibiLibraries/apf241
+      ../RibiLibraries/Apfloat
 
   HEADERS += \
-      ../RibiLibraries/apf241/ap.h \
-      ../RibiLibraries/apf241/apcplx.h \
-      ../RibiLibraries/apf241/apfloat.h \
-      ../RibiLibraries/apf241/apint.h \
-      ../RibiLibraries/apf241/aprat.h \
-      ../RibiLibraries/apf241/baseint.h \
-      ../RibiLibraries/apf241/bigint.h \
-      ../RibiLibraries/apf241/modint.h \
-      ../RibiLibraries/apf241/raw.h \
-      ../RibiLibraries/apf241/tapfloat.h
+      ../RibiLibraries/Apfloat/ap.h \
+      ../RibiLibraries/Apfloat/apcplx.h \
+      ../RibiLibraries/Apfloat/apfloat.h \
+      ../RibiLibraries/Apfloat/apint.h \
+      ../RibiLibraries/Apfloat/aprat.h \
+      ../RibiLibraries/Apfloat/baseint.h \
+      ../RibiLibraries/Apfloat/bigint.h \
+      ../RibiLibraries/Apfloat/modint.h \
+      ../RibiLibraries/Apfloat/raw.h \
+      ../RibiLibraries/Apfloat/tapfloat.h
 
   SOURCES += \
-      ../RibiLibraries/apf241/apcfunc.cpp \
-      ../RibiLibraries/apf241/apcplx.cpp \
-      ../RibiLibraries/apf241/apfloat.cpp \
-      ../RibiLibraries/apf241/apfunc.cpp \
-      ../RibiLibraries/apf241/apifunc.cpp \
-      ../RibiLibraries/apf241/apint.cpp \
-      ../RibiLibraries/apf241/aprat.cpp \
-      ../RibiLibraries/apf241/aprfunc.cpp \
-      ../RibiLibraries/apf241/apstruct.cpp \
-      ../RibiLibraries/apf241/baseint.cpp \
-      ../RibiLibraries/apf241/bigint.cpp \
-      ../RibiLibraries/apf241/carrycrt.cpp \
-      ../RibiLibraries/apf241/convolut.cpp \
-      ../RibiLibraries/apf241/crt.cpp \
-      ../RibiLibraries/apf241/datastru.cpp \
-      ../RibiLibraries/apf241/file.cpp \
-      ../RibiLibraries/apf241/fnt.cpp \
-      ../RibiLibraries/apf241/fourstep.cpp \
-      ../RibiLibraries/apf241/global.cpp \
-      ../RibiLibraries/apf241/init.cpp \
-      ../RibiLibraries/apf241/modfunc.cpp \
-      ../RibiLibraries/apf241/move.cpp \
-      ../RibiLibraries/apf241/scramble.cpp \
-      ../RibiLibraries/apf241/sixstep.cpp \
-      ../RibiLibraries/apf241/tablefnt.cpp \
-      ../RibiLibraries/apf241/tablefou.cpp \
-      ../RibiLibraries/apf241/tablesit.cpp \
-      ../RibiLibraries/apf241/tablesix.cpp \
-      ../RibiLibraries/apf241/tabletwo.cpp \
-      ../RibiLibraries/apf241/tabletwt.cpp \
-      ../RibiLibraries/apf241/tapfloat.cpp \
-      ../RibiLibraries/apf241/tapfunc.cpp \
-      ../RibiLibraries/apf241/tapstruc.cpp \
-      ../RibiLibraries/apf241/transpos.cpp \
-      ../RibiLibraries/apf241/wfta_asm.cpp
+      ../RibiLibraries/Apfloat/apcfunc.cpp \
+      ../RibiLibraries/Apfloat/apcplx.cpp \
+      ../RibiLibraries/Apfloat/apfloat.cpp \
+      ../RibiLibraries/Apfloat/apfunc.cpp \
+      ../RibiLibraries/Apfloat/apifunc.cpp \
+      ../RibiLibraries/Apfloat/apint.cpp \
+      ../RibiLibraries/Apfloat/aprat.cpp \
+      ../RibiLibraries/Apfloat/aprfunc.cpp \
+      ../RibiLibraries/Apfloat/apstruct.cpp \
+      ../RibiLibraries/Apfloat/baseint.cpp \
+      ../RibiLibraries/Apfloat/bigint.cpp \
+      ../RibiLibraries/Apfloat/carrycrt.cpp \
+      ../RibiLibraries/Apfloat/convolut.cpp \
+      ../RibiLibraries/Apfloat/crt.cpp \
+      ../RibiLibraries/Apfloat/datastru.cpp \
+      ../RibiLibraries/Apfloat/file.cpp \
+      ../RibiLibraries/Apfloat/fnt.cpp \
+      ../RibiLibraries/Apfloat/fourstep.cpp \
+      ../RibiLibraries/Apfloat/global.cpp \
+      ../RibiLibraries/Apfloat/init.cpp \
+      ../RibiLibraries/Apfloat/modfunc.cpp \
+      ../RibiLibraries/Apfloat/move.cpp \
+      ../RibiLibraries/Apfloat/scramble.cpp \
+      ../RibiLibraries/Apfloat/sixstep.cpp \
+      ../RibiLibraries/Apfloat/tablefnt.cpp \
+      ../RibiLibraries/Apfloat/tablefou.cpp \
+      ../RibiLibraries/Apfloat/tablesit.cpp \
+      ../RibiLibraries/Apfloat/tablesix.cpp \
+      ../RibiLibraries/Apfloat/tabletwo.cpp \
+      ../RibiLibraries/Apfloat/tabletwt.cpp \
+      ../RibiLibraries/Apfloat/tapfloat.cpp \
+      ../RibiLibraries/Apfloat/tapfunc.cpp \
+      ../RibiLibraries/Apfloat/tapstruc.cpp \
+      ../RibiLibraries/Apfloat/transpos.cpp \
+      ../RibiLibraries/Apfloat/wfta_asm.cpp
 }
