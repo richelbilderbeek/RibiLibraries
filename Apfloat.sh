@@ -1,8 +1,5 @@
 #!/bin/sh
-if [ ! -d apf241 ]
+if [ ! -d Apfloat ]
 then
-  mkdir apf241
-  cp apf241.zip apf241
-  cd apf241
-  unzip apf241.zip
+  git clone https://github.com/richelbilderbeek/Apfloat
 fi
