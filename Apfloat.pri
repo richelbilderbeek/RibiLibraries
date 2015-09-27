@@ -9,7 +9,11 @@ win32 {
       ../RibiLibraries/Apfloat/ap.h \
       ../RibiLibraries/Apfloat/apcplx.h \
       ../RibiLibraries/Apfloat/apfloat.h \
+<<<<<<< HEAD
       ../RibiLibraries/Apfloat/apint.h \
+=======
+      ../RibiLibraries/Apfloat/ap1int.h \
+>>>>>>> 866367aa437b7aede94b4c76fe46782e7a7f86b6
       ../RibiLibraries/Apfloat/aprat.h \
       ../RibiLibraries/Apfloat/baseint.h \
       ../RibiLibraries/Apfloat/bigint.h \
