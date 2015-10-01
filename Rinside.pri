@@ -51,3 +51,6 @@ QMAKE_LIBS +=           $$RLDFLAGS $$RBLAS $$RLAPACK $$RINSIDELIBS $$RCPPLIBS
 
 ## addition clean targets
 QMAKE_CLEAN +=		qtdensity Makefile
+
+INCLUDEPATH += \
+  ../RibiLibraries/rinside/inst/include
