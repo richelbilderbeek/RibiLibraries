@@ -52,5 +52,9 @@ QMAKE_LIBS +=           $$RLDFLAGS $$RBLAS $$RLAPACK $$RINSIDELIBS $$RCPPLIBS
 ## addition clean targets
 QMAKE_CLEAN +=		qtdensity Makefile
 
-INCLUDEPATH += \
-  ../RibiLibraries/rinside/inst/include
+
+# Do not forget to install Rinsde in R
+# Otherwise, you will get the error: 'error: RInside.h: No such file or directory'
+
+# Do not forget to install Rcpp in R
+# Otherwise, you will get the error: 'error: Rcpp.h: No such file or directory'

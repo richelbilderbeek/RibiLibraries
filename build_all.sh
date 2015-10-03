@@ -1,6 +1,7 @@
 #!/bin/sh
 
 ./Apfloat.sh
+./bigint.sh
 ./fparser.sh
 ./Rcpp.sh
 ./RInside.sh
