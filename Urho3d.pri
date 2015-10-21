@@ -1,9 +1,9 @@
 INCLUDEPATH += \
-    ../../Libraries/Urho3D/include \
-    ../../Libraries/Urho3D/include/Urho3D/ThirdParty
+    ../RibiLibraries/Urho3D/include \
+    ../RibiLibraries/Urho3D/include/Urho3D/ThirdParty
 
 LIBS += \
-  ../../Libraries/Urho3D/lib/libUrho3D.a
+  ../RibiLibraries/Urho3D/lib/libUrho3D.a
 
 LIBS += \
     -lpthread \
