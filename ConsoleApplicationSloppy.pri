@@ -14,7 +14,15 @@ macx {
 unix:!macx{
   # Linux only
   message("Console application, built for Linux")
-  QMAKE_CXXFLAGS += -std=c++17 -Wall -Wextra #-Werror
+  message(Host name: $$QMAKE_HOST.name)
+  contains(QMAKE_HOST.name,fwn-biol-132-102) {
+    message("Host is university computer")
+    QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra #-Werror
+  }
+  !contains(QMAKE_HOST.name,fwn-biol-132-102) {
+    message("Host is not a university computer")
+    QMAKE_CXXFLAGS += -std=c++17 -Wall -Wextra #-Werror
+  }
 }
 
 cross_compile {
