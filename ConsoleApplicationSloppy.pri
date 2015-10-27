@@ -19,8 +19,12 @@ unix:!macx{
     message("Host is university computer")
     QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra #-Werror
   }
-  !contains(QMAKE_HOST.name,fwn-biol-132-102) {
-    message("Host is not a university computer")
+  contains(QMAKE_HOST.name,pg-login) {
+    message("Host is Peregrine cluster")
+    QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra #-Werror
+  }
+  contains(QMAKE_HOST.name,maakplek) {
+    message("Host is home computer")
     QMAKE_CXXFLAGS += -std=c++17 -Wall -Wextra #-Werror
   }
 }
