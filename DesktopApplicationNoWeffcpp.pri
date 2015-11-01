@@ -20,18 +20,20 @@ unix:!macx{
   equals(QT_MAJOR_VERSION, 4): LIBS +=  -lQtSvg
   greaterThan(QT_MAJOR_VERSION, 4): QT +=  concurrent opengl printsupport svg
 
+  QMAKE_CXXFLAGS += -Wall -Wextra -Werror
+
   message(Host name: $$QMAKE_HOST.name)
   contains(QMAKE_HOST.name,fwn-biol-132-102) {
-    message("Host is university computer")
-    QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra #-Werror
+    message("C++1y: Host is university computer")
+    QMAKE_CXXFLAGS += -std=c++1y
   }
   contains(QMAKE_HOST.name,pg-login) {
-    message("Host is Peregrine cluster")
-    QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra #-Werror
+    message("C++1y: Host is Peregrine cluster")
+    QMAKE_CXXFLAGS += -std=c++1y
   }
-  contains(QMAKE_HOST.name,maakplek) {
-    message("Host is home computer")
-    QMAKE_CXXFLAGS += -std=c++17 -Wall -Wextra #-Werror
+  contains(QMAKE_HOST.name,maakplek-PC6-lubuntu) {
+    message("C++17: Host is home computer")
+    QMAKE_CXXFLAGS += -std=c++17
   }
 }
 
