@@ -17,7 +17,26 @@ unix:!macx {
   # Linux only
   message("Desktop application, built for Linux")
   greaterThan(QT_MAJOR_VERSION, 4): QT += svg sql printsupport
-  QMAKE_CXXFLAGS += -std=c++17 -Wall -Wextra -Weffc++ -Werror
+  QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+
+  message(Host name: $$QMAKE_HOST.name)
+  contains(QMAKE_HOST.name,fwn-biol-132-102) {
+    message("C++1y: Host is university computer")
+    QMAKE_CXXFLAGS += -std=c++1y
+  }
+  contains(QMAKE_HOST.name,pg-login) {
+    message("C++1y: Host is Peregrine cluster")
+    QMAKE_CXXFLAGS += -std=c++1y
+  }
+  contains(QMAKE_HOST.name,maakplek-PC2) {
+    message("C++1y: Host is Lubunt maakplek computer")
+    QMAKE_CXXFLAGS += -std=c++1y
+  }
+  contains(QMAKE_HOST.name,maakplek-PC6-lubuntu) {
+    message("C++17: Host is Lubunt maakplek computer")
+    QMAKE_CXXFLAGS += -std=c++17
+  }
+
 }
 
 cross_compile {

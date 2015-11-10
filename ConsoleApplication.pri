@@ -27,8 +27,12 @@ unix:!macx{
     message("C++1y: Host is Peregrine cluster")
     QMAKE_CXXFLAGS += -std=c++1y
   }
+  contains(QMAKE_HOST.name,maakplek-PC2) {
+    message("C++1y: Host is Lubunt maakplek computer")
+    QMAKE_CXXFLAGS += -std=c++1y
+  }
   contains(QMAKE_HOST.name,maakplek-PC6-lubuntu) {
-    message("C++17: Host is home computer")
+    message("C++17: Host is Lubunt maakplek computer")
     QMAKE_CXXFLAGS += -std=c++17
   }
 }
