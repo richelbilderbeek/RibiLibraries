@@ -5,7 +5,10 @@ then
   git clone https://github.com/mxe/mxe.git
 fi
 
+echo "export PATH=//home/maakplek/GitHubs/RibiLibraries/mxe/usr/bin:$PATH" >> ~/.bashrc
+
 cd mxe
 
 make gcc boost qt qt5 qtbase wt qwt
 #make
+
