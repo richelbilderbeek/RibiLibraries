@@ -29,6 +29,10 @@ unix:!macx{
     message("C++1y: Host is university computer")
     QMAKE_CXXFLAGS += -std=c++1y
   }
+  contains(QMAKE_HOST.name,fwn-biol-144-131) {
+    message("C++1y: Host is G's university computer")
+    QMAKE_CXXFLAGS += -std=c++1y
+  }
   contains(QMAKE_HOST.name,pg-login) {
     message("C++1y: Host is Peregrine cluster")
     QMAKE_CXXFLAGS += -std=c++1y

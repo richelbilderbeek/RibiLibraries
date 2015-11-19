@@ -20,7 +20,11 @@ unix:!macx{
 
   message(Host name: $$QMAKE_HOST.name)
   contains(QMAKE_HOST.name,fwn-biol-132-102) {
-    message("C++1y: Host is university computer")
+    message("C++1y: Host is university computer (my place)")
+    QMAKE_CXXFLAGS += -std=c++1y
+  }
+  contains(QMAKE_HOST.name,fwn-biol-144-131) {
+    message("C++1y: Host is university computer (G's place)")
     QMAKE_CXXFLAGS += -std=c++1y
   }
   contains(QMAKE_HOST.name,pg-login) {
@@ -69,4 +73,3 @@ TEMPLATE = app
 CONFIG(release, debug|release) {
   DEFINES += NDEBUG NTRACE_BILDERBIKKEL
 }
-
