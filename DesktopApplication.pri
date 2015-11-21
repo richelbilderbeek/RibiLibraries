@@ -16,12 +16,16 @@ macx {
 unix:!macx {
   # Linux only
   message("Desktop application, built for Linux")
-  greaterThan(QT_MAJOR_VERSION, 4): QT += svg sql printsupport
+  greaterThan(QT_MAJOR_VERSION, 4): QTb += svg sql printsupport
   QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
 
   message(Host name: $$QMAKE_HOST.name)
   contains(QMAKE_HOST.name,fwn-biol-132-102) {
     message("C++1y: Host is university computer")
+    QMAKE_CXXFLAGS += -std=c++1y
+  }
+  contains(QMAKE_HOST.name,fwn-biol-144-131) {
+    message("C++1y: Host is university computer, G's")
     QMAKE_CXXFLAGS += -std=c++1y
   }
   contains(QMAKE_HOST.name,pg-login) {
