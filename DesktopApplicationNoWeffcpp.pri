@@ -1,6 +1,7 @@
 # Qt does not go well with -Weffc++
 # Qwt does not go well with -Weffc++
 # apfloat does not go well with -Weffc++
+# RInside does not go well with -Weffc++
 
 win32 {
   # Windows only

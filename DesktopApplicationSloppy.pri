@@ -1,4 +1,5 @@
 # -Weffc++ does not go with apfloat, Qwt
+# RInside does not go well with -Wextra and -Weffc++
 
 win32 {
   # Windows only
