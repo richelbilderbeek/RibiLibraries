@@ -37,6 +37,7 @@ unix:!macx{
   LIBS += \
     -lboost_date_time \
     -lboost_filesystem \
+    -lboost_graph \
     -lboost_locale \
     -lboost_program_options \
     -lboost_regex \
