@@ -18,6 +18,7 @@ unix:!macx {
   message("Desktop application, built for Linux")
   greaterThan(QT_MAJOR_VERSION, 4): QT += svg sql printsupport
   QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+  QMAKE_CXXFLAGS += -std=c++1y
 
   message(Host name: $$QMAKE_HOST.name)
   contains(QMAKE_HOST.name,fwn-biol-132-102) {
