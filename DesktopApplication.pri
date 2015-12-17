@@ -41,6 +41,10 @@ unix:!macx {
     message("C++17: Host is Lubunt maakplek computer")
     QMAKE_CXXFLAGS += -std=c++17
   }
+  contains(QMAKE_HOST.name,lubuntu-laptop-rotterdam) {
+    message("C++17: Host is Lubunt laptop from Rotterdam")
+    QMAKE_CXXFLAGS += -std=c++17
+  }
 
 }
 
