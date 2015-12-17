@@ -18,6 +18,7 @@ unix:!macx {
   message("Desktop application, built for Linux")
   greaterThan(QT_MAJOR_VERSION, 4): QTb += svg sql printsupport
   QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+  QMAKE_CXXFLAGS += -std=c++1y
 
   message(Host name: $$QMAKE_HOST.name)
   contains(QMAKE_HOST.name,fwn-biol-132-102) {
@@ -38,6 +39,10 @@ unix:!macx {
   }
   contains(QMAKE_HOST.name,maakplek-PC6-lubuntu) {
     message("C++17: Host is Lubunt maakplek computer")
+    QMAKE_CXXFLAGS += -std=c++17
+  }
+  contains(QMAKE_HOST.name,lubuntu-laptop-rotterdam) {
+    message("C++17: Host is Lubunt laptop from Rotterdam")
     QMAKE_CXXFLAGS += -std=c++17
   }
 
