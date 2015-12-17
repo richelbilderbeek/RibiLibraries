@@ -1,6 +1,7 @@
 # Qt does not go well with -Weffc++
 # Qwt does not go well with -Weffc++
 # apfloat does not go well with -Weffc++
+# RInside does not go well with -Weffc++
 
 win32 {
   # Windows only
@@ -27,6 +28,10 @@ unix:!macx{
   message(Host name: $$QMAKE_HOST.name)
   contains(QMAKE_HOST.name,fwn-biol-132-102) {
     message("C++1y: Host is university computer")
+    QMAKE_CXXFLAGS += -std=c++1y
+  }
+  contains(QMAKE_HOST.name,fwn-biol-144-131) {
+    message("C++1y: Host is G's university computer")
     QMAKE_CXXFLAGS += -std=c++1y
   }
   contains(QMAKE_HOST.name,pg-login) {
