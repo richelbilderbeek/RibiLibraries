@@ -22,8 +22,6 @@ macx {
 unix:!macx{
   # Linux only
   message("Wt, built for Linux")
-  #DEFINES += BILDERBIKKEL_WT_INCLUDED # Does not work
-  #INCLUDEPATH += ../RibiLibraries/wt/src
   LIBS += -lwt -lwthttp
 
   # sudo apt-get install witty-dev
@@ -32,9 +30,6 @@ unix:!macx{
 cross_compile {
   # Crosscompile only
   message("Wt, cross-compiling from Linux to Windows")
-  DEFINES += BILDERBIKKEL_WT_INCLUDED
-  INCLUDEPATH += \
-    ../RibiLibraries/wt/src
   LIBS += -lwt -lwthttp
 }
 
