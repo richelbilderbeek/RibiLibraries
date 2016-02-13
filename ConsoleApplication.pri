@@ -19,29 +19,13 @@ unix:!macx{
   QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
 
   message(Host name: $$QMAKE_HOST.name)
-  contains(QMAKE_HOST.name,fwn-biol-132-102) {
-    message("C++1y: Host is university computer (my place)")
-    QMAKE_CXXFLAGS += -std=c++1y
-  }
-  contains(QMAKE_HOST.name,fwn-biol-144-131) {
-    message("C++1y: Host is university computer (G's place)")
-    QMAKE_CXXFLAGS += -std=c++1y
-  }
-  contains(QMAKE_HOST.name,pg-login) {
-    message("C++1y: Host is Peregrine cluster")
-    QMAKE_CXXFLAGS += -std=c++1y
-  }
-  contains(QMAKE_HOST.name,maakplek-PC2) {
-    message("C++1y: Host is Lubunt maakplek computer")
-    QMAKE_CXXFLAGS += -std=c++1y
-  }
-  contains(QMAKE_HOST.name,maakplek-PC6-lubuntu) {
-    message("C++17: Host is Lubunt maakplek computer")
+  contains(QMAKE_HOST.name,druten) {
+    message("C++17: Host is desktop from Druten")
     QMAKE_CXXFLAGS += -std=c++17
   }
-  contains(QMAKE_HOST.name,lubuntu-laptop-rotterdam) {
-    message("C++17: Host is Lubunt laptop from Rotterdam")
-    QMAKE_CXXFLAGS += -std=c++17
+  !contains(QMAKE_HOST.name,druten) {
+    message("C++1y: Host is not desktop from Druten")
+    QMAKE_CXXFLAGS += -std=c++1y
   }
 }
 
