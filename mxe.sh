@@ -9,6 +9,6 @@ echo "export PATH=//home/maakplek/GitHubs/RibiLibraries/mxe/usr/bin:$PATH" >> ~/
 
 cd mxe
 
-make gcc boost qt qt5 qtbase wt qwt
+make gcc boost qt qt5 qtbase wt qwt sfml
 #make
 
