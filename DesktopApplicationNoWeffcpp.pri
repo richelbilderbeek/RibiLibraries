@@ -34,6 +34,7 @@ unix:!macx{
     message("C++1y: Host is not desktop from Druten")
     QMAKE_CXXFLAGS += -std=c++1y
   }
+  QMAKE_CXXFLAGS += -std=c++11
 }
 
 cross_compile {
