@@ -50,6 +50,7 @@ unix:!macx{
     message("C++17: Host is Lubuntu laptop from Rotterdam")
     QMAKE_CXXFLAGS += -std=c++17
   }
+  QMAKE_CXXFLAGS += -std=c++11
 }
 
 cross_compile {
