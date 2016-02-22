@@ -117,7 +117,7 @@ istream &operator>> (istream &str, apint &d)
         // Get the actual data
 
         val = val * Basedigit + valuetable[(unsigned char) c];
-        if (++r == Basedigits)
+        if (static_cast<int>(++r) == Basedigits)
         {
             if (nonzero)
             {
@@ -160,7 +160,7 @@ istream &operator>> (istream &str, apint &d)
         buffercheck (&t, ap, &data);
 
         if (size)                               // Not first base unit
-            for (; r < Basedigits; r++)
+            for (; static_cast<int>(r) < Basedigits; r++)
                 val *= Basedigit;
 
         data[t++] = val;

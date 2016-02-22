@@ -957,7 +957,7 @@ istream &operator>> (istream &str, apfloat &d)
         // Get the actual data
 
         val = val * Basedigit + valuetable[(unsigned char) c];
-        if (++r == Basedigits)
+        if (static_cast<int>(++r) == Basedigits)
         {
             if (nonzero)
             {
@@ -1003,7 +1003,7 @@ istream &operator>> (istream &str, apfloat &d)
         buffercheck (&t, ap, &data);
 
         if (size || intcount <= leadzeros)      // Not first integer part base unit
-            for (; r < Basedigits; r++)
+            for (; static_cast<int>(r) < Basedigits; r++)
                 val *= Basedigit;
 
         data[t++] = val;
@@ -1055,7 +1055,7 @@ istream &operator>> (istream &str, apfloat &d)
         tmpexp = tmpexp / Basedigits;
         e += (exp + l) % Basedigits;
         exp = (exp + l) / Basedigits - t + tmpexp;
-        if (e >= Basedigits)
+        if (static_cast<int>(e) >= Basedigits)
         {
             e -= Basedigits;
             exp++;

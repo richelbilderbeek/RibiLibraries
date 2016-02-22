@@ -39,8 +39,7 @@ extern size_t Maxblocksize;
 extern size_t Memorytreshold;
 extern size_t Blocksize;
 extern size_t NProcessors;
-//Lucas changed Basedigits to unsigned
-extern int unsigned Basedigits;
+extern int Basedigits;
 
 extern int fno;
 

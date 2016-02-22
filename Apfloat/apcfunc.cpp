@@ -120,7 +120,7 @@ apcomplex invroot (apcomplex u, unsigned n)
 
     expdiff = u.re.exp () - u.im.exp ();
 
-    if (labs (expdiff) <= Basedigits)
+    if (labs (expdiff) <= static_cast<int>(Basedigits))
     {
         x = u.re;
         y = u.im;
@@ -267,7 +267,7 @@ apcomplex invroot (apcomplex u, unsigned n)
     // Check where the precising iteration should be done
     for (k = 0, maxprec = prec; maxprec < destprec; k++, maxprec <<= 1);
     for (f = k, minprec = prec; f; f--, minprec <<= 1)
-        if ( minprec >= 2 * Basedigits && (minprec - 2 * Basedigits) << f >= destprec)
+        if ( static_cast<int>(minprec) >= 2 * Basedigits && (minprec - 2 * Basedigits) << f >= destprec)
             break;
 
     // Newton's iteration
@@ -317,7 +317,7 @@ apcomplex agm (apcomplex a, apcomplex b)
         return apfloat (new apstruct);      // Zero
 
     // Precision must be at least 2 * Basedigits
-    if (destprec <= Basedigits)
+    if (static_cast<int>(destprec) <= Basedigits)
     {
         destprec = 2 * Basedigits;
         a.re.prec (max (a.re.prec (), destprec));
@@ -583,7 +583,7 @@ apcomplex exp (apcomplex u)
     // Check where the precising iteration should be done
     for (k = 0, maxprec = prec; maxprec < destprec; k++, maxprec <<= 1);
     for (f = k, minprec = prec; f; f--, minprec <<= 1)
-        if (minprec >= 3 * Basedigits && (minprec - 3 * Basedigits) << f >= destprec)
+        if (static_cast<int>(minprec) >= 3 * Basedigits && (minprec - 3 * Basedigits) << f >= destprec)
             break;
 
     // Newton's iteration

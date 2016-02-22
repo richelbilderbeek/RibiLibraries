@@ -20,7 +20,7 @@ size_t NProcessors = 1;
 
 rawtype Base = BASE;
 rawtype Basedigit = BASEDIGIT;
-unsigned int Basedigits = BASEDIGITS;
+int Basedigits = BASEDIGITS;
 rawtype Basefactors[16] = {BASEFACTORS[0], BASEFACTORS[1]};     // All prime factors of Base
 unsigned int NBasefactors = NBASEFACTORS;                                // Number of prime factors of Base
 
