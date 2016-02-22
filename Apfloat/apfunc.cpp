@@ -184,7 +184,7 @@ apfloat invroot (apfloat u, unsigned n, size_t destprec, apfloat initguess, size
     // Check where the precising iteration should be done
     for (k = 0, maxprec = prec; maxprec < destprec; k++, maxprec <<= 1);
     for (f = k, minprec = prec; f; f--, minprec <<= 1)
-        if (minprec >= 2 * Basedigits && (minprec - 2 * Basedigits) << f >= destprec)
+        if (static_cast<int>(minprec) >= 2 * Basedigits && (minprec - 2 * Basedigits) << f >= destprec)
             break;
 
     // Newton's iteration
@@ -478,7 +478,7 @@ apfloat agm (apfloat a, apfloat b)
         return apfloat (new apstruct);      // Zero
 
     // Precision must be at least 2 * Basedigits
-    if (destprec <= Basedigits)
+    if (static_cast<int>(destprec) <= Basedigits)
     {
         destprec = 2 * Basedigits;
         a.prec (max (a.prec (), destprec));
@@ -568,7 +568,7 @@ void checklogconst (size_t destprec)
         rawtype f;
 
         f = 1;
-        for (t = 0; t < Basedigits - 1; t++)
+        for (t = 0; static_cast<int>(t) < Basedigits - 1; t++)
             f *= Basedigit;                     // base is Basedigit^-1
 
         data[0] = f;
@@ -668,7 +668,7 @@ apfloat exp (apfloat u)
     // Check where the precising iteration should be done
     for (k = 0, maxprec = prec; maxprec < destprec; k++, maxprec <<= 1);
     for (f = k, minprec = prec; f; f--, minprec <<= 1)
-        if (minprec >= 3 * Basedigits && (minprec - 3 * Basedigits) << f >= destprec)
+        if (static_cast<int>(minprec) >= 3 * Basedigits && (minprec - 3 * Basedigits) << f >= destprec)
             break;
 
     // Newton's iteration
