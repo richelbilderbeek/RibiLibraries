@@ -1,17 +1,9 @@
 #include <cmath>
 #include "ap.h"
 
-
 using namespace std;
 
-
-#ifndef M_PI
-#define M_PI 3.14159265358979323846
-#endif
-
-
 // Overloaded apfloat functions
-
 
 // Constants needed for log & exp
 apfloat Readypi;
@@ -258,7 +250,7 @@ apfloat fmod (apfloat x, apfloat y)
 
     if (a < b)
         return x;                   // abs (x) < abs (y)
-    else if (static_cast<signed>(x.prec ()) <= x.exp () - y.exp ()) //size_t from unsigned to signed?
+    else if (static_cast<int>(x.prec()) <= x.exp () - y.exp ())
         return 0;                   // Degenerate case; not enough precision to make any sense
     else
         s = x.exp () - y.exp () + 3 * Basedigits;   // Some extra precision
@@ -563,12 +555,12 @@ void checklogconst (size_t destprec)
 
     if (!Logbase.ap || Logbase.prec () < destprec || LogbaseBase != Base)
     {
-        int unsigned t;
+        int t;
         modint *data = new modint[1];
         rawtype f;
 
         f = 1;
-        for (t = 0; static_cast<int>(t) < Basedigits - 1; t++)
+        for (t = 0; t < Basedigits - 1; t++)
             f *= Basedigit;                     // base is Basedigit^-1
 
         data[0] = f;
