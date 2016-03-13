@@ -16,7 +16,7 @@ unix:!macx{
   message("Console application, built for Linux")
   message(Host name: $$QMAKE_HOST.name)
 
-  contains(QMAKE_HOST.name,travis) {
+  contains(QMAKE_HOST.name,testing-gce) {
     message("C++11: Host is Travis CI")
     CONFIG += c++11
     QMAKE_CXX = g++-4.8
