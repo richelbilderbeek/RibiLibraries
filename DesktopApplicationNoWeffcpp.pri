@@ -20,21 +20,15 @@ macx {
 unix:!macx{
   # Linux only
   message("Desktop application, no effc++, built for Linux")
+  message(Host name: $$QMAKE_HOST.name)
+  CONFIG += c++11
+  QMAKE_CXX = g++-4.8
+  QMAKE_LINK = g++-4.8
+  QMAKE_CC = gcc-4.8
+  QMAKE_CXXFLAGS += -Wall -Wextra -Werror -std=c++11
+
   equals(QT_MAJOR_VERSION, 4): LIBS +=  -lQtSvg
   greaterThan(QT_MAJOR_VERSION, 4): QT +=  concurrent opengl printsupport svg
-
-  QMAKE_CXXFLAGS += -Wall -Wextra -Werror
-
-  message(Host name: $$QMAKE_HOST.name)
-  contains(QMAKE_HOST.name,druten) {
-    message("C++17: Host is desktop from Druten")
-    QMAKE_CXXFLAGS += -std=c++17
-  }
-  !contains(QMAKE_HOST.name,druten) {
-    message("C++1y: Host is not desktop from Druten")
-    QMAKE_CXXFLAGS += -std=c++1y
-  }
-  QMAKE_CXXFLAGS += -std=c++11
 }
 
 cross_compile {
