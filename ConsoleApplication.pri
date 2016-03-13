@@ -16,7 +16,16 @@ unix:!macx{
   message("Console application, built for Linux")
   message(Host name: $$QMAKE_HOST.name)
 
-  QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+  contains(QMAKE_HOST.name,travis) {
+    message("C++11: Host is Travis CI")
+    CONFIG += c++11
+    QMAKE_CXX = g++-4.8
+    QMAKE_LINK = g++-4.8
+    QMAKE_CC = gcc-4.8
+    QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++11
+  }
+
+  #QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++11
 
   message(Host name: $$QMAKE_HOST.name)
   contains(QMAKE_HOST.name,druten) {

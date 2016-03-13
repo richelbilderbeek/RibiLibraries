@@ -13,5 +13,10 @@ cd Source
 cd ThirdParty
 cd Bullet
 make
+cd ..
+cd ..
+cd ..
+cd ..
 
-sudo apt-get install libx11-dev libxrandr-dev libasound2-dev libgl1-mesa-dev
+# Note must have these installed:
+# sudo apt-get install libx11-dev libxrandr-dev libasound2-dev libgl1-mesa-dev

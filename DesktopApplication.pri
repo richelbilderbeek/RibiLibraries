@@ -14,17 +14,17 @@ macx {
 }
 
 unix:!macx {
-  # Linux only
   message("Desktop application, built for Linux")
-  greaterThan(QT_MAJOR_VERSION, 4): QTb += svg sql printsupport
-  QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
-  QMAKE_CXXFLAGS += -std=c++1y
-
   message(Host name: $$QMAKE_HOST.name)
-  contains(QMAKE_HOST.name,fwn-biol-132-102) {
-    message("C++1y: Host is university computer")
-    QMAKE_CXXFLAGS += -std=c++1y
+  contains(QMAKE_HOST.name,travis) {
+    message("C++11: Host is Travis CI")
+    CONFIG += c++11
+    QMAKE_CXX = g++-4.8
+    QMAKE_LINK = g++-4.8
+    QMAKE_CC = gcc-4.8
+    QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++11
   }
+
   contains(QMAKE_HOST.name,fwn-biol-144-131) {
     message("C++1y: Host is university computer, G's")
     QMAKE_CXXFLAGS += -std=c++1y
@@ -46,6 +46,7 @@ unix:!macx {
     QMAKE_CXXFLAGS += -std=c++17
   }
 
+  greaterThan(QT_MAJOR_VERSION, 4): QTb += svg sql printsupport
 }
 
 cross_compile {
