@@ -14,9 +14,16 @@ macx {
 unix:!macx{
   # Linux only
   message("Web application, built for Linux")
-  greaterThan(QT_MAJOR_VERSION, 4): QT += svg sql printsupport
+  message(Host name: $$QMAKE_HOST.name)
+
   #Cannot use -Weffc++ nor -Werror with Wt
-  QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra
+  CONFIG += c++11
+  QMAKE_CXX = g++-4.8
+  QMAKE_LINK = g++-4.8
+  QMAKE_CC = gcc-4.8
+  QMAKE_CXXFLAGS += -Wall -Wextra -std=c++11
+
+  greaterThan(QT_MAJOR_VERSION, 4): QT += svg sql printsupport
 }
 
 cross_compile {
