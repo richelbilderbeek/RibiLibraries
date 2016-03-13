@@ -16,26 +16,11 @@ unix:!macx{
   message("Console application, built for Linux")
   message(Host name: $$QMAKE_HOST.name)
 
-  contains(QMAKE_HOST.name,testing-gce) {
-    message("C++11: Host is Travis CI")
-    CONFIG += c++11
-    QMAKE_CXX = g++-4.8
-    QMAKE_LINK = g++-4.8
-    QMAKE_CC = gcc-4.8
-    QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++11
-  }
-
-  #QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++11
-
-  message(Host name: $$QMAKE_HOST.name)
-  contains(QMAKE_HOST.name,druten) {
-    message("C++17: Host is desktop from Druten")
-    QMAKE_CXXFLAGS += -std=c++17
-  }
-  !contains(QMAKE_HOST.name,druten) {
-    message("C++1y: Host is not desktop from Druten")
-    QMAKE_CXXFLAGS += -std=c++1y
-  }
+  CONFIG += c++11
+  QMAKE_CXX = g++-4.8
+  QMAKE_LINK = g++-4.8
+  QMAKE_CC = gcc-4.8
+  QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++11
 }
 
 cross_compile {
