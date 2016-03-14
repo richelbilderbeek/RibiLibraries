@@ -21,10 +21,9 @@ unix:!macx{
   # Linux only
   message("Desktop application, no effc++, built for Linux")
   message(Host name: $$QMAKE_HOST.name)
-  CONFIG += c++11
-  QMAKE_CXX = g++-4.8
-  QMAKE_LINK = g++-4.8
-  QMAKE_CC = gcc-4.8
+  QMAKE_CXX = g++-5
+  QMAKE_LINK = g++-5
+  QMAKE_CC = gcc-5
   QMAKE_CXXFLAGS += -Wall -Wextra -Werror -std=c++11
 
   equals(QT_MAJOR_VERSION, 4): LIBS +=  -lQtSvg
@@ -43,10 +42,6 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TEMPLATE = app
-
-CONFIG(debug, debug|release) {
-  message(Debug mode)
-}
 
 CONFIG(release, debug|release) {
   message(Release mode)
