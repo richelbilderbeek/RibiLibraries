@@ -32,7 +32,7 @@ cross_compile {
   QMAKE_CC = gcc-4.8
   QMAKE_CXXFLAGS += -Wall -Werror -std=c++11
 
-  greaterThan(QT_MAJOR_VERSION, 4): QTb += svg sql printsupport
+  greaterThan(QT_MAJOR_VERSION, 4): QT += svg sql printsupport
 }
 
 QT       += core gui
