@@ -26,8 +26,13 @@ unix:!macx{
 cross_compile {
   # Crosscompile only
   message("Desktop application, no effc++, cross-compiling from Linux to Windows")
-  greaterThan(QT_MAJOR_VERSION, 4): QT += svg
-  QMAKE_CXXFLAGS += -std=c++1y -Wall #-Wextra -Weffc++
+  CONFIG += c++11
+  QMAKE_CXX = g++-4.8
+  QMAKE_LINK = g++-4.8
+  QMAKE_CC = gcc-4.8
+  QMAKE_CXXFLAGS += -Wall -Werror -std=c++11
+
+  greaterThan(QT_MAJOR_VERSION, 4): QTb += svg sql printsupport
 }
 
 QT       += core gui
