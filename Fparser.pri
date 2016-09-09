@@ -3,8 +3,7 @@
 # Warp's function parser
 #
 #
-INCLUDEPATH += \
-  ../RibiLibraries/fparser4.5.2
+INCLUDEPATH += ../RibiLibraries/fparser4.5.2
 
 HEADERS += \
   ../RibiLibraries/fparser4.5.2/extrasrc/fpaux.hh \
