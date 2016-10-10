@@ -220,12 +220,7 @@ win32 {
   # }
 }
 
-macx {
-  # Mac only
-  message("Qwt 6.1, built for Mac")
-}
-
-unix:!macx{
+unix{
   # Linux only
   message("Qwt 6.1, built for Linux")
 
