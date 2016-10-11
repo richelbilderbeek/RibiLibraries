@@ -15,11 +15,22 @@ unix:!macx{
   # Linux only
   message("Console application, built for Linux")
 
-  CONFIG += c++11
-  QMAKE_CXX = g++-5
-  QMAKE_LINK = g++-5
-  QMAKE_CC = gcc-5
-  QMAKE_CXXFLAGS += -Wall -Wextra -Werror -std=c++11
+  message(Host name: $$QMAKE_HOST.name)
+  contains(QMAKE_HOST.name,pc-157-103) {
+    message("Host is student computer")
+    QMAKE_CXX = g++-4.9
+    QMAKE_LINK = g++-4.9
+    QMAKE_CC = gcc-4.9
+    QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++1y
+  }
+  !contains(QMAKE_HOST.name,pc-157-103) {
+    message("Host is not student computer")
+    CONFIG += c++14
+    QMAKE_CXX = g++-5
+    QMAKE_LINK = g++-5
+    QMAKE_CC = gcc-5
+    QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++14
+  }
 }
 
 cross_compile {
