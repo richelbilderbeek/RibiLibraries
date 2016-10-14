@@ -19,13 +19,13 @@ macx {
 
 unix:!macx{
   # Linux only
-  message("Desktop application, no effc++, GCC 4.8, built for Linux")
+  message("GNU/Linux")
   message(Host name: $$QMAKE_HOST.name)
   message(Qt version: $$QT_MAJOR_VERSION)
-  QMAKE_CXX = g++-4.8
-  QMAKE_LINK = g++-4.8
-  QMAKE_CC = gcc-4.8
-  QMAKE_CXXFLAGS += -Wall -Wextra -Werror -std=c++11
+  QMAKE_CXX = g++-5
+  QMAKE_LINK = g++-5
+  QMAKE_CC = gcc-5
+  QMAKE_CXXFLAGS += -Wall -Wextra -Werror -std=c++14
 
   equals(QT_MAJOR_VERSION, 4): LIBS +=  -lQtSvg
   greaterThan(QT_MAJOR_VERSION, 4): QT +=  concurrent opengl printsupport svg

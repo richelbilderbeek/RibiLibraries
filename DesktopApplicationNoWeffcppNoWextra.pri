@@ -19,7 +19,7 @@ unix:!macx{
   message("Desktop application, no effc++, built for Linux")
   equals(QT_MAJOR_VERSION, 4): LIBS +=  -lQtSvg
   greaterThan(QT_MAJOR_VERSION, 4): QT +=  concurrent opengl printsupport svg
-  QMAKE_CXXFLAGS += -std=c++1y -Wall -Werror #-Wextra -Weffc++
+  QMAKE_CXXFLAGS += -std=c++14 -Wall -Werror #-Wextra -Weffc++
 }
 
 cross_compile {

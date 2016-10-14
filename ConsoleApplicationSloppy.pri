@@ -25,7 +25,7 @@ unix:!macx{
   }
   contains(QMAKE_HOST.name,maakplek) {
     message("Host is home computer")
-    QMAKE_CXXFLAGS += -std=c++17 -Wall -Wextra #-Werror
+    QMAKE_CXXFLAGS += -std=c++14 -Wall -Wextra #-Werror
   }
 }
 
