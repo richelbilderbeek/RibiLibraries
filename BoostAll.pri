@@ -1,10 +1,9 @@
 win32 {
   # Windows only
   message("Boost, all libraries, built for Windows")
-  INCLUDEPATH += \
-    ../../Libraries/boost_1_55_0
+  INCLUDEPATH += C:/boost_1_62_0
   LIBS += \
-    -L/../../Libraries/boost_1_55_0/bin.v2/libs \
+    -L/C:/boost_1_62_0/bin.v2/libs \
     -lboost_date_time \
     -lboost_filesystem \
     -lboost_graph \
@@ -13,6 +12,8 @@ win32 {
     -lboost_regex \
     -lboost_signals \
     -lboost_system
+
+  QMAKE_CXXFLAGS += -fext-numeric-literals
 }
 
 macx {
