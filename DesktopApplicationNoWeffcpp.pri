@@ -38,6 +38,7 @@ cross_compile {
   QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra #-Weffc++
 }
 
+CONFIG += debug_and_release
 
 QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
