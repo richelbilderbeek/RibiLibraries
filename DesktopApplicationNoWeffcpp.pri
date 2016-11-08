@@ -7,7 +7,8 @@ win32 {
   # Windows only
   message("Desktop application, no effc++, built for Windows")
   greaterThan(QT_MAJOR_VERSION, 4): QT += svg
-  QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra #-Weffc++
+  QMAKE_CXXFLAGS += -std=c++14 -Wall -Wextra #-Weffc++
+  CONFIG += c++14
 }
 
 macx {
@@ -37,6 +38,7 @@ cross_compile {
   QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra #-Weffc++
 }
 
+CONFIG += debug_and_release
 
 QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -48,4 +50,4 @@ CONFIG(release, debug|release) {
   DEFINES += NDEBUG NTRACE_BILDERBIKKEL
 }
 
-
+include(../RibiLibraries/Boost.pri)
