@@ -67,6 +67,6 @@ CONFIG   += debug_and_release
 #
 
 CONFIG(release, debug|release) {
-  DEFINES += NDEBUG NTRACE_BILDERBIKKEL
+  DEFINES += NDEBUG
 }
 
