@@ -5,7 +5,7 @@ then
   git clone https://github.com/mxe/mxe.git
 fi
 
-echo "export PATH=//home/maakplek/GitHubs/RibiLibraries/mxe/usr/bin:$PATH" >> ~/.bashrc
+echo "export PATH=/home/richel/GitHubs/RibiLibraries/mxe/usr/bin:$PATH" >> ~/.bashrc
 
 cd mxe
 
