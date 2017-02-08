@@ -22,6 +22,7 @@ unix:!macx{
   # Linux only
   message("GNU/Linux")
   message(Host name: $$QMAKE_HOST.name)
+  CONFIG += c++14
   QMAKE_CXX = g++-5
   QMAKE_LINK = g++-5
   QMAKE_CC = gcc-5
