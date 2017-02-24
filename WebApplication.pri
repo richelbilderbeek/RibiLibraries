@@ -53,5 +53,5 @@ CONFIG(debug, debug|release) {
 
 CONFIG(release, debug|release) {
   message(Release mode)
-  DEFINES += NDEBUG NTRACE_BILDERBIKKEL
+  DEFINES += NDEBUG
 }
