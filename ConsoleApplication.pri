@@ -17,6 +17,7 @@ unix:!macx{
   message("Console application, built for Linux")
   message(Host name: $$QMAKE_HOST.name)
 
+  CONFIG += c++14
   QMAKE_CXX = g++-5
   QMAKE_LINK = g++-5
   QMAKE_CC = gcc-5
@@ -53,5 +54,5 @@ TEMPLATE = app
 #
 
 CONFIG(release, debug|release) {
-  DEFINES += NDEBUG NTRACE_BILDERBIKKEL
+  DEFINES += NDEBUG
 }

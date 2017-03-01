@@ -17,13 +17,17 @@ unix:!macx {
   message("Desktop application, built for Linux")
   message(Host name: $$QMAKE_HOST.name)
 
+  # C++14
   CONFIG += c++14
   QMAKE_CXX = g++-5
   QMAKE_LINK = g++-5
   QMAKE_CC = gcc-5
-  QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++14
+  QMAKE_CXXFLAGS += -std=c++14
 
-  greaterThan(QT_MAJOR_VERSION, 4): QTb += svg sql printsupport
+  # High warning levels
+  QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror
+
+  greaterThan(QT_MAJOR_VERSION, 4): QT += svg sql printsupport
 }
 
 cross_compile {
@@ -32,11 +36,10 @@ cross_compile {
   QMAKE_CXXFLAGS += -std=c++1y -Wall -Wextra -Weffc++
 }
 
-
-QT       += core gui
+QT += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets svg
 
-TEMPLATE = app
+CONFIG += debug_and_release
 
 CONFIG(debug, debug|release) {
   message(Debug mode)
@@ -44,6 +47,6 @@ CONFIG(debug, debug|release) {
 
 CONFIG(release, debug|release) {
   message(Release mode)
-  DEFINES += NDEBUG NTRACE_BILDERBIKKEL
+  DEFINES += NDEBUG
 }
 
