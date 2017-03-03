@@ -52,6 +52,7 @@ TEMPLATE = app
 # Type of compile
 #
 #
+CONFIG += debug_and_release
 
 CONFIG(release, debug|release) {
   DEFINES += NDEBUG
