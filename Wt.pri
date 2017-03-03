@@ -24,6 +24,7 @@ unix:!macx{
   message("Wt, built for Linux")
   LIBS += -lwt -lwthttp
 
+  DEFINES += BOOST_SIGNALS_NO_DEPRECATION_WARNING
   # sudo apt-get install witty-dev
 }
 
