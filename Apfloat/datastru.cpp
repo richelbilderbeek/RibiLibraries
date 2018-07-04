@@ -503,9 +503,9 @@ void datastruct::capture (const char *newfilename)
     rename (newfilename, filename (fileno));
     assert (!i);
 
-    fstream &fs = openstream ();
-    fs.seekg (0, ios::end);                 // Get file size
-    size = (size_t) fs.tellg () / sizeof (modint);  // Rounds down in case of extra data at and of file
+    fstream &this_fs = openstream ();
+    this_fs.seekg (0, ios::end);                 // Get file size
+    size = (size_t) this_fs.tellg () / sizeof (modint);  // Rounds down in case of extra data at and of file
     closestream ();
 }
 

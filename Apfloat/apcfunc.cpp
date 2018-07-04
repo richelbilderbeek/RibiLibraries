@@ -493,16 +493,15 @@ apcomplex exp (apcomplex u)
     else
     {
         // Approximate starting value for iteration
-        double i, f;
 
         // If u.re is too big, an overflow will occur (somewhere)
         d = ap2double (u.re.ap);
-        i = floor (d);
-        f = d - i;
+        const double i = floor (d);
+        const double this_f = d - i;
 
         d = i / log ((double) Base);
 
-        x = apfloat (exp (f) * pow ((double) Base, d - floor (d)), fprec);
+        x = apfloat (exp (this_f) * pow ((double) Base, d - floor (d)), fprec);
         x.exp (x.exp () + Basedigits * (long) floor (d));
     }
 
