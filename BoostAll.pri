@@ -1,6 +1,13 @@
 win32 {
   # Windows only
   message("Boost, all libraries, built for Windows")
+
+  LIBS += \
+    -L/home/richel/GitHubs/mxe_gcc_cpp98/mxe/usr/bin \
+    -L/home/richel/GitHubs/mxe_gcc_cpp98/mxe/usr/i686-w64-mingw32.static/lib \
+    -L/home/richel/GitHubs/mxe_gcc_cpp98/mxe/usr/i686-w64-mingw32.static \
+    -lboost_graph
+
   #INCLUDEPATH += C:/boost_1_62_0
   #LIBS += \
   #  -L/C:/boost_1_62_0/bin.v2/libs \
