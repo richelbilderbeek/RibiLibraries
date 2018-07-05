@@ -2,23 +2,22 @@ win32 {
   # Windows only
   message("Boost, all libraries, built for Windows")
 
-  LIBS += \
-    -L/home/richel/GitHubs/mxe_gcc_cpp98/mxe/usr/bin \
-    -L/home/richel/GitHubs/mxe_gcc_cpp98/mxe/usr/i686-w64-mingw32.static/lib \
-    -L/home/richel/GitHubs/mxe_gcc_cpp98/mxe/usr/i686-w64-mingw32.static \
-    -lboost_graph
-
+  #LIBS += -L/home/richel/GitHubs/RibiLibraries/mxe/usr/i686-w64-mingw32.static/lib
+  #LIBS += -L/home/richel/GitHubs/RibiLibraries/mxe/usr/i686-w64-mingw32.static/qt5/lib/
+  #LIBS += -L/home/richel/GitHubs/RibiLibraries/mxe/usr/i686-w64-mingw32.static/lib
+  #LIBS += -L/home/richel/GitHubs/RibiLibraries/mxe/usr/i686-w64-mingw32.static
+  #LIBS += -L/C:/boost_1_62_0/bin.v2/libs \
   #INCLUDEPATH += C:/boost_1_62_0
-  #LIBS += \
-  #  -L/C:/boost_1_62_0/bin.v2/libs \
-  #  -lboost_date_time \
-  #  -lboost_filesystem \
-  #  -lboost_graph \
-  #  -lboost_locale \
-  #  -lboost_program_options \
-  #  -lboost_regex \
-  #  -lboost_signals \
-  #  -lboost_system
+
+  LIBS += \
+    -lboost_date_time-mt \
+    -lboost_filesystem-mt \
+    -lboost_graph-mt \
+    -lboost_locale-mt \
+    -lboost_program_options-mt \
+    -lboost_regex-mt \
+    -lboost_signals-mt \
+    -lboost_system-mt
 }
 
 macx {
@@ -53,16 +52,3 @@ unix:!macx{
     -lboost_system
 }
 
-cross_compile {
-  # Crosscompile only
-  message("Boost, all libraries, cross-compiling from Linux to Windows")
-  LIBS += \
-    -lboost_date_time \
-    -lboost_filesystem \
-    -lboost_graph \
-    -lboost_locale \
-    -lboost_program_options \
-    -lboost_regex \
-    -lboost_signals \
-    -lboost_system
-}
