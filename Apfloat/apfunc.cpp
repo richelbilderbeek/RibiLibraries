@@ -623,16 +623,14 @@ apfloat exp (apfloat u)
     {
         // Approximate starting value for iteration
 
-        double d, i, f;
-
         // If u is too big, an overflow will occur (somewhere)
-        d = ap2double (u.ap);
-        i = floor (d);
-        f = d - i;
+        double d = ap2double (u.ap);
+        const double i = floor (d);
+        const double this_f = d - i;
 
         d = i / log ((double) Base);
 
-        x = exp (f) * pow ((double) Base, d - floor (d));
+        x = exp (this_f) * pow ((double) Base, d - floor (d));
         x.exp (x.exp () + Basedigits * (long) floor (d));
 
         prec = min (doubledigits, Basedigits);
