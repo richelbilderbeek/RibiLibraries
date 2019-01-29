@@ -137,7 +137,6 @@ win32 {
       ../RibiLibraries/qwt-6.1/src/qwt_plot_xml.cpp \
       ../RibiLibraries/qwt-6.1/src/qwt_plot_tradingcurve.cpp \
       ../RibiLibraries/qwt-6.1/src/qwt_plot_textlabel.cpp \
-      ../RibiLibraries/qwt-6.1/src/qwt_plot_svgitem.cpp \
       ../RibiLibraries/qwt-6.1/src/qwt_plot_spectrogram.cpp \
       ../RibiLibraries/qwt-6.1/src/qwt_plot_spectrocurve.cpp \
       ../RibiLibraries/qwt-6.1/src/qwt_plot_shapeitem.cpp \
@@ -204,6 +203,7 @@ win32 {
       ../RibiLibraries/qwt-6.1/src/qwt_abstract_scale.cpp \
       ../RibiLibraries/qwt-6.1/src/qwt_abstract_legend.cpp
 
+     #../RibiLibraries/qwt-6.1/src/qwt_plot_svgitem.cpp \
 
   # Option #2
   # INCLUDEPATH += ../RibiLibraries/qwt-6.1/src
