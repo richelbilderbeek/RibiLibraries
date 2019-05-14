@@ -224,7 +224,7 @@ unix{
   # Linux only
   message("Qwt 6.1, built for Linux")
 
-  greaterThan(QT_MAJOR_VERSION, 4): QT += widgets concurrent opengl printsupport
+  greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
   DEFINES += QWT_NO_SVG
 
