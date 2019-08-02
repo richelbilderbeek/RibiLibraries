@@ -17,11 +17,11 @@ unix:!macx {
   message("Desktop application, built for Linux")
   message(Host name: $$QMAKE_HOST.name)
 
+  # C++14
   CONFIG += c++14
-  QMAKE_CXX = g++-5
-  QMAKE_LINK = g++-5
-  QMAKE_CC = gcc-5
-  QMAKE_CXXFLAGS += -Wall -Werror -std=c++14  # -Wall -Wextra
+  QMAKE_CXXFLAGS += -std=c++14
+
+  QMAKE_CXXFLAGS += -Wall -Werror # -Wall -Wextra
 
   greaterThan(QT_MAJOR_VERSION, 4): QT += svg sql printsupport
 }
