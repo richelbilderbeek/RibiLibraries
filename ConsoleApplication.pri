@@ -16,12 +16,7 @@ unix:!macx{
   # Linux only
   message("Console application, built for Linux")
   message(Host name: $$QMAKE_HOST.name)
-
-  CONFIG += c++14
-  QMAKE_CXX = g++-5
-  QMAKE_LINK = g++-5
-  QMAKE_CC = gcc-5
-  QMAKE_CXXFLAGS += -Wall -Wextra -Weffc++ -Werror -std=c++14
+  QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 }
 
 cross_compile {
