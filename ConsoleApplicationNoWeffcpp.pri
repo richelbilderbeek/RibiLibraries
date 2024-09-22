@@ -15,11 +15,13 @@ unix:!macx{
   # Linux only
   message("Console application, built for Linux")
 
-  # C++14 
-  CONFIG += c++14
-  QMAKE_CXXFLAGS += -std=c++14
+  # C++20
+  CONFIG += c++20
+  QMAKE_CXXFLAGS += -std=c++20
  
   QMAKE_CXXFLAGS += -Wall -Wextra -Werror
+
+  LIBS += -lboost_timer
 }
 
 cross_compile {
