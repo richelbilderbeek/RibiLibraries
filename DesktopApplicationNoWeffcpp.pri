@@ -23,8 +23,8 @@ unix:!macx{
   message("GNU/Linux")
   message(Host name: $$QMAKE_HOST.name)
   # C++14
-  CONFIG += c++14
-  QMAKE_CXXFLAGS += -std=c++14
+  CONFIG += c++17
+  QMAKE_CXXFLAGS += -std=c++17
 
   QMAKE_CXXFLAGS += -Wall -Wextra -Werror
 

@@ -19,7 +19,7 @@ public:
     apcomplex ();
 
     // Create a complex object given polar coordinates
-    friend apcomplex polar (apfloat mag, apfloat angle = 0);
+    friend apcomplex polar (apfloat mag, apfloat angle);
 
     // Complex manipulations
     friend apfloat real (const apcomplex &);            // Real part
