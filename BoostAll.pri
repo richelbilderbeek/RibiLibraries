@@ -48,7 +48,6 @@ unix:!macx{
     -lboost_locale \
     -lboost_program_options \
     -lboost_regex \
-    -lboost_signals \ #Deprecated
     -lboost_system
 }
 
